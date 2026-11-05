@@ -1,0 +1,22 @@
+name: 想要一种新风格
+description: 告诉我你想看的风格，我做出来更新到图鉴里
+title: "[想要的风格] "
+labels: ["风格需求"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 风格名称
+      description: 一句话说清楚，比如“胶片电影感”“水彩绘本”
+    validations:
+      required: true
+  - type: textarea
+    id: feel
+    attributes:
+      label: 想要什么感觉？
+      description: 配色、质感、动作都可以写。想到什么写什么
+  - type: input
+    id: ref
+    attributes:
+      label: 参考链接（可选）
+      description: 喜欢的视频、网站或图片

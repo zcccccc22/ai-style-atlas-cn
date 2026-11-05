@@ -1,3 +1,10 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+</head>
+<body>
 <title>百象动效图鉴</title>
 <meta name="description" content="一个 15 秒故事，用几十种视觉风格讲一遍。实时预览、分类筛选，一键生成可在任意 AI 编程助手中使用的中文提示词。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -215,6 +222,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .panel header h2{font-size:22px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.star{display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 14px;border-radius:999px;background:var(--gamboge);color:var(--gamboge-ink);text-decoration:none;font-size:15px;font-weight:600;white-space:nowrap}
+.star:hover{filter:brightness(1.05)}
+.star b{font-weight:600;padding-left:7px;margin-left:1px;border-left:1px solid rgba(29,21,4,.28)}
+.star b:empty{display:none}
+.follow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:24px;max-width:600px}
+.follow p{margin:0;width:100%;font-size:16px;color:var(--muted)}
+.follow a.more{color:var(--azurite);font-size:15.5px;text-underline-offset:3px}
+.wish{text-align:center}
+.wish .sub{margin-inline:auto}
+.wish-acts{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:24px}
+.wish-acts .star{height:48px;padding:0 24px;font-size:17px}
+.wish-acts .alt{display:inline-flex;align-items:center;height:48px;padding:0 24px;border-radius:999px;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;font-size:17px;font-weight:600}
+.wish-acts .alt:hover{background:var(--ink);color:var(--bg)}
+.wish small{display:block;margin-top:14px;font-size:14px;color:var(--muted)}
+@media (max-width:640px){.top .wrap{gap:8px}.top .icon-btn{display:none}.brand{font-size:16px}}
 </style>
 
 <header class="top">
@@ -224,7 +246,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <a class="keep" href="#atlas">风格库</a>
       <a href="#use">怎么用</a>
       <a href="#refs">灵感索引</a>
+      <a href="#wish">想要新风格</a>
     </nav>
+    <a class="star" href="https://github.com/zcccccc22/ai-style-atlas-cn" target="_blank" rel="noopener" title="到 GitHub 上点 Star 收藏"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.5l-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg>收藏<b class="star-n"></b></a>
     <button class="icon-btn" id="theme" type="button" aria-label="切换明暗">明暗：系统</button>
   </div>
 </header>
@@ -247,6 +271,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <div><b class="mono" id="stat-n">67</b><span>种风格</span></div>
         <div><b class="mono" id="stat-c">15</b><span>大类</span></div>
         <div><b class="mono">0</b><span>张图片素材，画面全部由代码绘制</span></div>
+      </div>
+      <div class="follow">
+        <p>图鉴会一直更新。觉得有用就点个收藏，以后随时能找回来。</p>
+        <a class="star" href="https://github.com/zcccccc22/ai-style-atlas-cn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.5l-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg>在 GitHub 上收藏<b class="star-n"></b></a>
+        <a class="more" href="#wish">想要什么风格？告诉我</a>
       </div>
     </div>
     <div class="screen">
@@ -285,6 +314,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="grid" id="grid"></div>
   </div>
 </main>
+
+<section class="band wish" id="wish">
+  <div class="wrap">
+    <h2>这本图鉴会一直更新</h2>
+    <p class="sub">我会不断加入新风格。点个收藏，以后随时能找回来；有想看的风格，告诉我，我做出来放到这里。</p>
+    <div class="wish-acts">
+      <a class="star" href="https://github.com/zcccccc22/ai-style-atlas-cn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.5l-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg>在 GitHub 上收藏<b class="star-n"></b></a>
+      <a class="alt" href="https://github.com/zcccccc22/ai-style-atlas-cn/issues/new?template=style-request.yml" target="_blank" rel="noopener">告诉我你想要的风格</a>
+    </div>
+    <small>收藏和提需求都在 GitHub 上完成，需要一个免费的 GitHub 账号。</small>
+  </div>
+</section>
 
 <section class="band" id="use">
   <div class="wrap">
@@ -2698,4 +2739,9 @@ if(document.fonts){document.fonts.addEventListener&&document.fonts.addEventListe
 const h=(location.hash||'').match(/^#s-([a-z0-9]+)$/);if(h&&BY[h[1]])openModal(h[1]);
 requestAnimationFrame(frame);
 
+/* 收藏数：取不到时只显示按钮，不显示数字 */
+(()=>{const put=n=>{if(typeof n==='number'&&n>0)document.querySelectorAll('.star-n').forEach(e=>{e.textContent=n})};let c=null;try{c=sessionStorage.getItem('bx-stars')}catch(e){}if(c!==null){put(+c);return}fetch('https://api.github.com/repos/zcccccc22/ai-style-atlas-cn').then(r=>r.ok?r.json():null).then(d=>{if(!d)return;put(d.stargazers_count);try{sessionStorage.setItem('bx-stars',d.stargazers_count)}catch(e){}}).catch(()=>{})})();
+
 </script>
+</body>
+</html>
